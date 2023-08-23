@@ -1,10 +1,10 @@
 package med.vol.api.controller;
 
 import jakarta.validation.Valid;
-import med.vol.api.entities.dto.AtualizarMedico;
-import med.vol.api.entities.dto.DadosMedico;
-import med.vol.api.entities.dto.DetalharMedico;
-import med.vol.api.entities.dto.ListarMedicos;
+import med.vol.api.entities.dto.medico.AtualizarMedico;
+import med.vol.api.entities.dto.medico.DadosMedico;
+import med.vol.api.entities.dto.medico.DetalharMedico;
+import med.vol.api.entities.dto.medico.ListarMedicos;
 import med.vol.api.entities.Medico;
 import med.vol.api.repository.MedicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,10 +25,10 @@ public class MedicoController {
 
     @Transactional
     @PostMapping
-    public ResponseEntity<DetalharMedico> cadatrarMedico(@RequestBody @Valid DadosMedico dados, UriComponentsBuilder uribuilder) {
+    public ResponseEntity<DetalharMedico> cadatrarMedico(@RequestBody @Valid DadosMedico dados, UriComponentsBuilder uriBuilder) {
         var medico = new Medico(dados);
         repository.save(medico);
-        var uri = uribuilder.path("/medicos/{id}").buildAndExpand(medico.getId()).toUri();
+        var uri = uriBuilder.path("/medicos/{id}").buildAndExpand(medico.getId()).toUri();
         return ResponseEntity.created(uri).body(new DetalharMedico(medico));
     }
 

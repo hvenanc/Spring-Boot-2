@@ -2,8 +2,8 @@ package med.vol.api.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-import med.vol.api.entities.dto.AtualizarMedico;
-import med.vol.api.entities.dto.DadosMedico;
+import med.vol.api.entities.dto.medico.AtualizarMedico;
+import med.vol.api.entities.dto.medico.DadosMedico;
 
 @Table(name = "medicos")
 @Getter

@@ -1,4 +1,4 @@
-package med.vol.api.entities.dto;
+package med.vol.api.entities.dto.paciente;
 
 import med.vol.api.entities.Paciente;
 

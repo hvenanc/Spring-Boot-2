@@ -1,16 +1,13 @@
-package med.vol.api.entities.dto;
+package med.vol.api.entities.dto.medico;
 
 import jakarta.validation.constraints.NotNull;
-import med.vol.api.entities.Endereco;
+import med.vol.api.entities.dto.DadosEndereco;
 
-public record AtualizarPaciente(
+public record AtualizarMedico(
 
         @NotNull
         Long id,
-
         String nome,
-
         String telefone,
-
         DadosEndereco endereco) {
 }

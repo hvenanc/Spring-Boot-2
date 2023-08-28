@@ -1,5 +1,5 @@
 # Spring Boot
-Formação Spring Boot Alura - Curso 2/3
+Curso 2
 
 Spring Boot
 
@@ -11,13 +11,19 @@ Boas Práticas:
 
 ResponseEntity: Utilizar a classe ResponseEntity para representar toda a resposta HTTP. Você pode controlar qualquer coisa que aconteça: código de status, cabeçalhos e corpo.
 
+Segurança:
 
+Adição de uma camada de autenticação na API, a partir do acesso via
+Token JWT.
+Apenas usuários logados e com cadastro na aplicação podem acessar os endpoints.
 
 ### Bibliotecas
 
 #### JPA
 #### Flyway
 #### Spring Validation
+#### Java JWT
+#### BCrypt
 
 ### Padrões de Projeto
 
